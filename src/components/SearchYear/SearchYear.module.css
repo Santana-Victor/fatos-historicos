@@ -1,0 +1,36 @@
+.input {
+  width: 25rem;
+  border: 0.2rem solid transparent;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input input {
+  width: 100%;
+  padding-left: 0.5rem;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.6rem;
+}
+
+.input button {
+  border: none;
+  width: 3.4rem;
+  height: 3.4rem;
+  padding: 0.4rem;
+  background-color: var(--background-btn-search);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input .icon {
+  font-size: 2rem;
+  fill: #fff;
+}
