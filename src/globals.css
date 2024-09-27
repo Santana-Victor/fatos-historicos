@@ -1,5 +1,25 @@
+:root {
+  --background-primary: #ebebeb;
+  --background-btn-search: #026464;
+  --text-color-primary: #000000;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color-primary);
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: var(--background-primary);
+}
+
+.input_error {
+  border: 0.2rem solid #ff0000;
 }
