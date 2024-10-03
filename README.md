@@ -38,7 +38,9 @@ Esse projeto é o Front-end da aplicação Fatos Históricos, onde o usuário in
 
 3. Vá até o arquivo `.env.example` na raiz do projeto e renome-o para `.env`
 
-4. Execute o projeto com o comando `npm run dev`
+4. Ainda no arquivo `.env` preencha a variável `VITE_URL_API`, por exemplo: `http://localhost:8080/facts`
+
+5. Execute o projeto com o comando `npm run dev`
 
 - [Acesse o projeto finalizado, online](https://fatos-historicos-nu.vercel.app/)
 - [Repositório da API REST](https://github.com/Santana-Victor/api-fatos-historicos)
