@@ -20,6 +20,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [React.js](https://github.com/facebook/react)
 - [Typescript](https://www.typescriptlang.org/)
 - [Zustand](https://github.com/pmndrs/zustand)
+- [Vite.js](https://vite.dev/)
 
 ## Projeto
 
