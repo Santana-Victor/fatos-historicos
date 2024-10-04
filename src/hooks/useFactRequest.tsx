@@ -2,6 +2,7 @@ import { useHistoricalFactStore } from '../store/useHistoricalFactStore';
 import { useErrorResponseStore } from '../store/useErrorResponseStore';
 import { validateYearEntered } from '../validators/YearEnteredValidator';
 import getHistoricalFactService from '../services/getHistoricalFactService';
+import { useIsLoadingStore } from '../store/useIsLoadingStore';
 
 interface IProps {
   yearEntered: string;
@@ -17,6 +18,8 @@ export default function useFactRequest() {
     (state) => state.setHistoricalFact
   );
   const setIsError = useErrorResponseStore((state) => state.setIsError);
+  const setIsLoading = useIsLoadingStore((state) => state.setIsLoading);
+
   const urlAPI = import.meta.env.VITE_URL_API as string;
 
   async function executeSearchHistoricalFact({
@@ -24,12 +27,16 @@ export default function useFactRequest() {
     setYearEntered,
   }: IProps) {
     const isValid = validateYearEntered(yearEntered);
+    setIsLoading(true);
 
     if (isValid) {
       const fact = await getHistoricalFactService(urlAPI, Number(yearEntered));
+
+      setIsLoading(false);
       setHistoricalFact(fact);
       setIsError(false);
     } else {
+      setIsLoading(false);
       setIsError(true);
     }
 

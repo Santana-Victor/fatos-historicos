@@ -27,6 +27,7 @@
 }
 
 .main .error {
+  text-align: center;
   font-size: 1.4rem;
   color: #ff0000;
 }
